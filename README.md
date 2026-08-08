@@ -1,33 +1,29 @@
 📌 Overview
 
 <img width="1287" height="667" alt="image" src="https://github.com/user-attachments/assets/7a4874a2-5bb4-47c6-82f3-99f72866a24c" />
-🎯 Project Objectives
-Clean and transform raw retail data.
-Build a scalable Star Schema data model.
-Create business KPIs using DAX.
-Perform Time Intelligence analysis.
-Analyze Customers, Products, Stores, and Sales.
-Build an interactive Power BI dashboard for business users.
 
 🛠️ Tools & Technologies
-Microsoft Power BI
-Power Query
-DAX
-Data Modeling
-Star Schema
-Time Intelligence
-Navigation
-Q&A Visual
+
+
+<img width="1393" height="735" alt="image" src="https://github.com/user-attachments/assets/85f48a68-7656-400a-a92f-9b6a47db856c" />
+
 
 📂 Dataset
-The dataset contains four main business entities:
-Customer
-Product
-Store
-Sales Fact Table
-Additionally, a dedicated Date Dimension was created to support Time Intelligence calculations.
+
+
+| Business Entity      | Description                                                                                             |
+| ---------------- | ----------------------------------------------------------------------------------------------------------- |
+| Customer         | Contains customer information used for customer behavior and sales analysis.                                |
+| Product          | Contains product details used to analyze product and category performance.                                  |
+| Store            | Contains store information used to evaluate branch-level performance.                                       |
+| Sales Fact Table | Contains sales transactions and measures such as quantity, price, cost, discount, and returns.              |
+| Date Dimension   | Dedicated date table created to support Time Intelligence calculations such as MTD, QTD, YTD, MoM, and YoY. |
+
+
 
 🧹 Data Cleaning
+
+
 Several data quality issues were identified and resolved before building the dashboard.
 Customer Table
 Replaced invalid Gender values (???) with Unknown Gender
