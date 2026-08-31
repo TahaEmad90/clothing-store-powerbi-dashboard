@@ -297,7 +297,8 @@ This allows users to analyze performance for specific periods, categories, or lo
 
 # 🏷️ 2. Category Analysis
 
-<img width="1183" height="661" alt="Category Analysis" src="https://github.com/user-attachments/assets/b95e337a-fe47-4122-887b-0a52fed40905" />
+<img width="1182" height="666" alt="image" src="https://github.com/user-attachments/assets/b11f57a2-dc97-458e-902d-af58448b5bc1" />
+
 
 The **Category Analysis** page provides a detailed overview of product category performance.
 
@@ -370,7 +371,7 @@ This allows users to compare discount levels between categories and understand h
 
 # 🔎 3. Category Details
 
-<img width="1184" height="663" alt="Category Details" src="https://github.com/user-attachments/assets/a7c4d6a6-96d2-42d0-a6a1-3b1eff14a85b" />
+<img width="1186" height="663" alt="image" src="https://github.com/user-attachments/assets/c1404d6b-ee91-44b3-aad1-6e30fc87b55c" />
 
 The **Category Details** page provides a deeper analysis of category performance over time and across multiple product attributes.
 
@@ -459,7 +460,8 @@ This provides additional insight into customer purchasing patterns and product d
 
 # 📊 4. Category Performance
 
-<img width="1186" height="665" alt="Category Performance" src="https://github.com/user-attachments/assets/4c0b8c1e-0000-0000-0000-000000000000" />
+<img width="1192" height="663" alt="image" src="https://github.com/user-attachments/assets/77ecd030-9ba5-49b0-b681-e6f633696faa" />
+
 
 The **Category Performance** page focuses on evaluating category performance across different time periods.
 
@@ -512,9 +514,8 @@ Conditional formatting makes positive and negative performance easier to identif
 
 # 👥 5. Customer Analysis
 
-<img width="1186" height="662" alt="Customer Analysis" src="https://github.com/user-attachments/assets/6724d0eb-d25b-48f1-a02e-6a62c776a26b" />
+<img width="1184" height="665" alt="image" src="https://github.com/user-attachments/assets/b98b4387-25ac-4fef-8520-73aba047ca70" />
 
-<img width="1186" height="665" alt="Customer Analysis Detail" src="https://github.com/user-attachments/assets/c5197ac2-a89d-4ade-8d63-063d67731ba2" />
 
 The **Customer Analysis** section focuses on understanding customer behavior and contribution to the business.
 
@@ -587,7 +588,8 @@ This allows the dashboard to show the impact of missing customer information on:
 
 # 📊 6. Customer Performance
 
-<img width="1186" height="665" alt="Customer Performance" src="https://github.com/user-attachments/assets/c5197ac2-a89d-4ade-8d63-063d67731ba2" />
+<img width="1183" height="661" alt="image" src="https://github.com/user-attachments/assets/20ae4cdf-aaa5-4b97-abcb-743b2093f6d3" />
+
 
 The **Customer Performance** page evaluates customer-related sales performance across different time periods.
 
