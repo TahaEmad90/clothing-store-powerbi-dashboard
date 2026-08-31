@@ -98,52 +98,70 @@ This structure also supports efficient filtering, aggregation, and DAX calculati
 
 The dashboard includes a set of KPIs designed to monitor overall business performance, category performance, and customer performance.
 
-# 💼 Overall Business KPIs
+## 💼 Overall Business KPIs
 
 These KPIs provide a high-level view of the company's sales performance:
 
--Total Sales
--Net Sales Last Month
--Net Sales Last Quarter
--Net Sales Last Year
+- **Total Sales**
+- **Net Sales Last Month**
+- **Net Sales Last Quarter**
+- **Net Sales Last Year**
 
 These metrics allow users to quickly compare current sales performance with previous time periods and understand the overall direction of the business.
 
-# 🏷️ Category KPIs
+---
+
+## 🏷️ Category KPIs
 
 The Category Analysis page includes KPIs focused on orders, sales volume, category performance, and customer order behavior:
 
--Total Orders
--Total Quantity
--Top Selling Category
--Average Order Value (AOV)
--Average Quantity per Order
+- **Total Orders**
+- **Total Quantity**
+- **Top Selling Category**
+- **Average Order Value (AOV)**
+- **Average Quantity per Order**
 
 These KPIs provide a quick summary of category-related business performance and help identify the strongest-selling category.
 
-# 👥 Customer KPIs
+---
+
+## 👥 Customer KPIs
 
 The Customer Analysis page includes KPIs focused on customer base and customer value:
 
--Total Customers
--Profit per Customer
--Net Sales for New Customers
+- **Total Customers**
+- **Profit per Customer**
+- **Net Sales for New Customers**
 
 These metrics help evaluate the size of the customer base, the average profit generated per customer, and the contribution of newly acquired customers to sales.
 
-# 📈 Performance & Time-Based KPIs
+---
+
+## 📈 Performance & Time-Based KPIs
 
 The dashboard also evaluates performance across different time periods using:
 
--Net Sales MTD — Month-to-Date
--Net Sales QTD — Quarter-to-Date
--Net Sales YTD — Year-to-Date
--Net Sales MoM% — Month-over-Month Growth
--Net Sales QoQ% — Quarter-over-Quarter Growth
--Net Sales YoY% — Year-over-Year Growth
+- **Net Sales MTD** — Month-to-Date
+- **Net Sales QTD** — Quarter-to-Date
+- **Net Sales YTD** — Year-to-Date
+- **Net Sales MoM%** — Month-over-Month Growth
+- **Net Sales QoQ%** — Quarter-over-Quarter Growth
+- **Net Sales YoY%** — Year-over-Year Growth
 
-These KPIs are used in the Category Performance and Customer Performance pages to compare current performance with previous periods.
+These KPIs are used in the **Category Performance** and **Customer Performance** pages to compare current performance with previous periods.
 
+---
+
+## 🎯 Target-Based KPIs
+
+The dashboard also includes user-defined target parameters.
+
+Users can select their own targets, and the KPI cards dynamically evaluate performance against those targets using conditional formatting:
+
+- 🟢 **Green** → Target achieved
+- 🔴 **Red** → Target not achieved
+
+This allows users to evaluate business performance based on their own selected targets rather than fixed benchmarks.
 ---
 
 # 📈 1. Business Overview
