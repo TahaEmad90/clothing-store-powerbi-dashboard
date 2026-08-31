@@ -23,13 +23,13 @@ Users can navigate between the different analytical sections of the dashboard, a
 
 The report includes the following main sections:
 
-Overview
-Categories
-Category Details
-Category Performance
-Customers
-Customer Performance
-Stores
+-Overview
+-Categories
+-Category Details
+-Category Performance
+-Customers
+-Customer Performance
+-Stores
 
 ---
 
@@ -102,10 +102,10 @@ The dashboard includes a set of KPIs designed to monitor overall business perfor
 
 These KPIs provide a high-level view of the company's sales performance:
 
-Total Sales
-Net Sales Last Month
-Net Sales Last Quarter
-Net Sales Last Year
+-Total Sales
+-Net Sales Last Month
+-Net Sales Last Quarter
+-Net Sales Last Year
 
 These metrics allow users to quickly compare current sales performance with previous time periods and understand the overall direction of the business.
 
@@ -113,11 +113,11 @@ These metrics allow users to quickly compare current sales performance with prev
 
 The Category Analysis page includes KPIs focused on orders, sales volume, category performance, and customer order behavior:
 
-Total Orders
-Total Quantity
-Top Selling Category
-Average Order Value (AOV)
-Average Quantity per Order
+-Total Orders
+-Total Quantity
+-Top Selling Category
+-Average Order Value (AOV)
+-Average Quantity per Order
 
 These KPIs provide a quick summary of category-related business performance and help identify the strongest-selling category.
 
@@ -125,9 +125,9 @@ These KPIs provide a quick summary of category-related business performance and 
 
 The Customer Analysis page includes KPIs focused on customer base and customer value:
 
-Total Customers
-Profit per Customer
-Net Sales for New Customers
+-Total Customers
+-Profit per Customer
+-Net Sales for New Customers
 
 These metrics help evaluate the size of the customer base, the average profit generated per customer, and the contribution of newly acquired customers to sales.
 
@@ -135,12 +135,12 @@ These metrics help evaluate the size of the customer base, the average profit ge
 
 The dashboard also evaluates performance across different time periods using:
 
-Net Sales MTD — Month-to-Date
-Net Sales QTD — Quarter-to-Date
-Net Sales YTD — Year-to-Date
-Net Sales MoM% — Month-over-Month Growth
-Net Sales QoQ% — Quarter-over-Quarter Growth
-Net Sales YoY% — Year-over-Year Growth
+-Net Sales MTD — Month-to-Date
+-Net Sales QTD — Quarter-to-Date
+-Net Sales YTD — Year-to-Date
+-Net Sales MoM% — Month-over-Month Growth
+-Net Sales QoQ% — Quarter-over-Quarter Growth
+-Net Sales YoY% — Year-over-Year Growth
 
 These KPIs are used in the Category Performance and Customer Performance pages to compare current performance with previous periods.
 
