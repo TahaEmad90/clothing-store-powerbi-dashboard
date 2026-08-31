@@ -17,16 +17,19 @@ The dashboard is designed as an analytical story, allowing users to start from a
 
 
 
-The **Landing Page** acts as the main navigation page of the report.
+The Landing Page serves as the main navigation page of the report.
 
-Users can navigate between the different analytical sections of the dashboard, including:
+Users can navigate between the different analytical sections of the dashboard, allowing them to move through the analysis in a structured way.
 
-- Overview
-- Category Analysis
-- Customer Analysis
-- Store Analysis
+The report includes the following main sections:
 
-This structure allows users to move from a high-level business overview to more detailed analysis.
+Overview
+Categories
+Category Details
+Category Performance
+Customers
+Customer Performance
+Stores
 
 ---
 
@@ -93,22 +96,53 @@ This structure also supports efficient filtering, aggregation, and DAX calculati
 
 # 📊 Key Performance Indicators
 
-The dashboard includes multiple KPIs to monitor business performance.
+The dashboard includes a set of KPIs designed to monitor overall business performance, category performance, and customer performance.
 
-### Business KPIs
+# 💼 Overall Business KPIs
 
-- **Total Sales**
-- **Net Sales Last Month**
-- **Net Sales Last Quarter**
-- **Net Sales Last Year**
+These KPIs provide a high-level view of the company's sales performance:
 
-### Customer KPIs
+Total Sales
+Net Sales Last Month
+Net Sales Last Quarter
+Net Sales Last Year
 
-- **Total Customers**
-- **Profit per Customer**
-- **Net Sales for New Customers**
+These metrics allow users to quickly compare current sales performance with previous time periods and understand the overall direction of the business.
 
-These KPIs provide a high-level view of business performance and customer contribution.
+# 🏷️ Category KPIs
+
+The Category Analysis page includes KPIs focused on orders, sales volume, category performance, and customer order behavior:
+
+Total Orders
+Total Quantity
+Top Selling Category
+Average Order Value (AOV)
+Average Quantity per Order
+
+These KPIs provide a quick summary of category-related business performance and help identify the strongest-selling category.
+
+# 👥 Customer KPIs
+
+The Customer Analysis page includes KPIs focused on customer base and customer value:
+
+Total Customers
+Profit per Customer
+Net Sales for New Customers
+
+These metrics help evaluate the size of the customer base, the average profit generated per customer, and the contribution of newly acquired customers to sales.
+
+# 📈 Performance & Time-Based KPIs
+
+The dashboard also evaluates performance across different time periods using:
+
+Net Sales MTD — Month-to-Date
+Net Sales QTD — Quarter-to-Date
+Net Sales YTD — Year-to-Date
+Net Sales MoM% — Month-over-Month Growth
+Net Sales QoQ% — Quarter-over-Quarter Growth
+Net Sales YoY% — Year-over-Year Growth
+
+These KPIs are used in the Category Performance and Customer Performance pages to compare current performance with previous periods.
 
 ---
 
