@@ -1,208 +1,509 @@
-📌 Overview
+# 👕 Clothing Store Sales & Business Performance Analysis Using Power BI
 
-<img width="1287" height="667" alt="image" src="https://github.com/user-attachments/assets/7a4874a2-5bb4-47c6-82f3-99f72866a24c" />
+## 📌 Project Overview
 
+This project analyzes clothing store sales data using **Power BI** to evaluate overall business performance, sales trends, category performance, customer behavior, store performance, profitability, and returned sales.
 
-🛠️ Tools & Technologies
+The project transforms raw transactional data into an interactive Business Intelligence solution using **Power Query, DAX, data modeling, KPIs, parameters, interactive slicers, and dynamic visualizations**.
 
+The dashboard is designed as an analytical story, allowing users to start from a high-level business overview and drill into **categories, customers, and stores** to understand the main drivers of business performance.
 
-<img width="1393" height="735" alt="image" src="https://github.com/user-attachments/assets/85f48a68-7656-400a-a92f-9b6a47db856c" />
+---
 
+# 🏠 Dashboard Navigation
 
 
-📂 Dataset
+<img width="1190" height="663" alt="image" src="https://github.com/user-attachments/assets/883241b8-2244-47eb-a567-9deabe2f2829" />
 
 
-| Business Entity      | Description                                                                                             |
-| ---------------- | ----------------------------------------------------------------------------------------------------------- |
-| Customer         | Contains customer information used for customer behavior and sales analysis.                                |
-| Product          | Contains product details used to analyze product and category performance.                                  |
-| Store            | Contains store information used to evaluate branch-level performance.                                       |
-| Sales Fact Table | Contains sales transactions and measures such as quantity, price, cost, discount, and returns.              |
-| Date Dimension   | Dedicated date table created to support Time Intelligence calculations such as MTD, QTD, YTD, MoM, and YoY. |
 
+The **Landing Page** acts as the main navigation page of the report.
 
+Users can navigate between the different analytical sections of the dashboard, including:
 
+- Overview
+- Category Analysis
+- Customer Analysis
+- Store Analysis
 
-🧹 Data Cleaning
+This structure allows users to move from a high-level business overview to more detailed analysis.
 
+---
 
+# 🗂️ Data Model
 
-| Table          | Data Quality Issue                         | Action Taken                                 |
-| -------------- | ------------------------------------------ | -------------------------------------------- |
-| Customer   | Invalid Gender values (`???`)              | Replaced with **Unknown Gender**                 |
-| Customer   | Missing Email values                       | Replaced with **Unknown Email**                  |
-| Product    | Invalid Category values                    | Replaced with **Unknown Category**               |
-| Product    | Missing Color values                       | Replaced with **Unknown Color**                  |
-| Sales      | Product IDs not found in Product Dimension | Replaced with **Unknown Product ID**             |
-| Sales      | Store IDs not found in Store Dimension     | Replaced with **Unknown Store ID**               |
-| Sales      | Missing Customer IDs                       | Replaced with **Unknown Customer ID**            |
-| Sales      | Missing Discount values                    | Replaced with **0**                              |
-| Sales      | Missing Cost Price & List Price            | Preserved as **NULL** to maintain data integrity |
-| All Tables | Duplicate records                          | Removed duplicate records                        |
 
+<img width="746" height="643" alt="image" src="https://github.com/user-attachments/assets/3b13c42a-e8d6-4902-bbac-ec385b0dfd4c" />
 
 
-🏗️ Data Model
 
+The project uses a **star schema** to organize the data model.
 
-The project follows a Star Schema design.
-Dimension Tables
-Customer
-Product
-Store
-Date
-Fact Table
-Sales
-This structure improves query performance and simplifies report development.
+The model consists of one central fact table surrounded by multiple dimension tables.
 
+### Fact Table
 
-<img width="710" height="609" alt="image" src="https://github.com/user-attachments/assets/be4dd36b-b968-4953-8194-2a4779464801" />
+**`Fact(sales_data)`**
 
-📈 DAX Measures
+The fact table contains transactional sales information, including:
 
+- `customer_id`
+- `product_id`
+- `store_id`
+- `date`
+- `quantity`
+- `list_price`
+- `cost_price`
+- `discount`
+- `returned`
 
-The dashboard includes a comprehensive set of business measures such as:
+### Dimension Tables
 
-<img width="1377" height="651" alt="image" src="https://github.com/user-attachments/assets/f1af4934-47aa-4a66-aa13-21fb507c42fa" />
+| Dimension Table | Description |
+|---|---|
+| `Dim(customer_data)` | Contains customer demographic and identification information |
+| `Dim(product_data)` | Contains product, category, pricing, season, size, color, and supplier information |
+| `Dim(Date)` | Contains calendar and time-related attributes |
+| `Dim(store_data)` | Contains store, region, and store-related information |
 
-<img width="1341" height="553" alt="image" src="https://github.com/user-attachments/assets/31e99254-52a3-4e07-abac-67a9bbe6b91e" />
+The relationships between the fact and dimension tables allow the dashboard to analyze sales from multiple perspectives, including **customer, product, date, and store**.
 
-🎨 Dashboard Features
+This structure also supports efficient filtering, aggregation, and DAX calculations throughout the report.
 
+---
 
-🏠 Landing Page
+# 🛠️ Tools & Technologies
 
+- **Power BI**
+- **Power Query**
+- **DAX**
+- Data Cleaning & Transformation
+- Data Modeling
+- Star Schema
+- Relationships
+- Calculated Measures
+- KPIs
+- Parameters
+- Conditional Formatting
+- Interactive Slicers
+- Data Visualization
+- Business Intelligence
 
-<img width="1172" height="607" alt="image" src="https://github.com/user-attachments/assets/d058fd88-df8e-4ce1-af9b-e24f08fa0e27" />
+---
 
+# 📊 Key Performance Indicators
 
-Sales Analysis – Overview
+The dashboard includes multiple KPIs to monitor business performance.
 
-The **Overview** page provides a comprehensive view of sales performance through interactive KPIs and dynamic analysis.
+### Business KPIs
 
-* **KPIs:** Sales, Return Rate, Total Cost, Profit, and Profit Margin.
-* **Dynamic Targets:** Users can set targets for Net Sales, Profit, and Profit Margin, with KPI colors changing based on target achievement.
-* **Sales Trend:** Date is fixed on the X-axis, while users can select the Y-axis measure.
-* **Dynamic Analysis:** Users can select both X-axis and Y-axis fields for flexible analysis.
-* **Category & City Analysis:** Analyzes Net Sales by category and city.
-* **Interactive Filters:** Date, Category, and City slicers allow users to customize the analysis.
+- **Total Sales**
+- **Net Sales Last Month**
+- **Net Sales Last Quarter**
+- **Net Sales Last Year**
 
+### Customer KPIs
 
-<img width="1197" height="683" alt="image" src="https://github.com/user-attachments/assets/0895e950-e2a8-4f77-aaa7-07e0573d640e" />
+- **Total Customers**
+- **Profit per Customer**
+- **Net Sales for New Customers**
 
+These KPIs provide a high-level view of business performance and customer contribution.
 
-Product & Time Analysis
+---
 
-The Product Analysis page evaluates category performance across sales, profitability, margins, and discount strategies, helping identify high-performing categories and data quality issues such as Unknown Category.
+# 📈 1. Business Overview
 
-The Time Intelligence analysis tracks MTD, QTD, and YTD performance alongside MoM, QoQ, and YoY growth, while Waterfall and Decomposition Tree visuals highlight sales changes and key drivers across different business dimensions.
 
-<img width="1189" height="670" alt="image" src="https://github.com/user-attachments/assets/0fd8277f-16e0-4eab-97c8-efa60cd241ca" />
-<img width="1194" height="668" alt="image" src="https://github.com/user-attachments/assets/40086419-1364-4d05-9191-f6188315c411" />
+<img width="1190" height="670" alt="image" src="https://github.com/user-attachments/assets/33a30a18-1267-4851-bb87-239c642dfb4d" />
 
 
 
-💡 Key Insights
+The Overview page provides a high-level view of the business performance.
 
--Shoes is the top-selling category by order count, with an average order value of 226.57 and ~3 items per order.
+It includes:
 
--Profit is nearly even across categories (1.15M–1.18M); Dresses generates the highest profit despite not being the top seller — indicating strong margin efficiency.
+- Total Sales
+- Net Sales Last Month
+- Net Sales Last Quarter
+- Net Sales Last Year
+- Sales Trend Analysis
+- Dynamic analytical visuals
+- Target-based KPI evaluation
 
--Product P000528 has notably higher returns (1,948) than any other product — a candidate for quality investigation.
-Shoes carries the highest average discount (5.68%), which may be compressing its margin relative to Dresses.
+The page is designed to give users a quick understanding of the current business performance before moving into more detailed analysis.
 
--YoY growth is strong across all categories (~24–26%), and Net Sales last month (11.00M) is already close to total sales (11.2M), showing accelerating recent momentum.
+---
 
+## 🎛️ Dynamic Analysis Parameters
 
-📉 Sales detial
+The Overview page includes **five user-controlled parameters** that make the dashboard more interactive.
 
+### Parameters 1 & 2 — Dynamic Axes
 
-Advanced analysis using:
-Waterfall Chart
-Decomposition Tree
-Time Intelligence Matrix
-Allows users to drill into yearly sales changes and identify business drivers.
+The first two parameters allow users to dynamically select the dimensions displayed on:
 
-<img width="1192" height="672" alt="image" src="https://github.com/user-attachments/assets/a77b43c9-ee4a-4615-9ddb-6837bb32d42e" />
+- X-Axis
+- Y-Axis
 
+This allows users to explore different relationships between business dimensions without requiring multiple separate visuals.
 
+For example, users can change the analytical dimensions and explore different views of the business using the same visual.
 
-💡 Key Insights
+---
 
+## 🎯 Target-Based KPI Analysis
 
--Sales show a clear cyclical pattern: growth in 2021, decline in 2022, sharp recovery in 2023, then a pullback in 2024 — suggesting market-driven volatility rather than steady linear growth.
+The remaining three parameters allow users to define their own performance targets.
 
--2023 stands out as the strongest growth year across almost all categories, making it a useful benchmark for what drove performance.
+The KPI formatting dynamically changes based on the selected target.
 
--The decomposition tree shows Supplier D as the top contributor to total sales, followed by Suppliers A, B, and C  supplier concentration is fairly balanced but Supplier D leads.
+- 🟢 **Green** → Target achieved
+- 🔴 **Red** → Target not achieved
 
--Fall and Winter seasons drive slightly higher sales than Spring and Summer, useful for inventory and promotion planning.
+This allows users to evaluate performance against their own selected targets instead of relying only on fixed benchmarks.
 
--At the most granular level, size XL and the color White lead within the Tops category  useful for merchandising decisions.
+---
 
+# 🏷️ 2. Category Analysis
 
 
+<img width="1186" height="663" alt="image" src="https://github.com/user-attachments/assets/d4c8b8d2-7f06-4a7f-9c70-2d83c00fc2ea" />
 
-👥 Customer Analysis
+<img width="1186" height="660" alt="image" src="https://github.com/user-attachments/assets/963d21d7-1a66-4715-affd-7c728eb62196" />
 
 
-The Customer Analysis page evaluates customer distribution, geographic sales performance, demographics, and new customer acquisition. It compares customer counts and Net Sales by city analyzes sales by gender and highlights Net Sales generated by new customers across cities, helping identify key markets and acquisition opportunities.
 
-<img width="1198" height="673" alt="image" src="https://github.com/user-attachments/assets/4a7ebd6e-b610-4ea4-b370-35c98b9d4bad" />
+The Category Analysis section focuses on understanding the performance of different product categories.
 
+The analysis examines category performance from multiple perspectives, including:
 
+- Sales
+- Profit
+- Revenue contribution
+- Category comparisons
+- Store-level category performance
 
-💡 Key Insights
+Users can apply filters such as **Date, Category, and City** to investigate category performance under different conditions.
 
+---
 
--Customer base is fairly evenly distributed across cities (Faro, Lisbon, Coimbra, Braga, Porto each 4.1K–4.4K), with no single city dominating.
+## 📊 Detailed Category Performance
 
--Lisbon generates the highest sales (2.24M) despite Faro having the largest customer count indicating higher average spend per customer in Lisbon.
+<img width="1185" height="669" alt="image" src="https://github.com/user-attachments/assets/05482219-1677-4444-a518-396ebf359d7f" />
 
--Gender split is nearly balanced between Male (32.47%), Female (31.69%), and Other (30.96%) — a notably diverse customer base with minimal skew.
 
--New customer sales mirror the overall city ranking (Lisbon > Faro > Braga > Coimbra > Porto), suggesting consistent acquisition performance across markets rather than one city driving growth.
+A deeper analysis is performed to understand differences between categories.
 
--Profit per customer stands at 148.45, with 2M in new customer sales, showing new customers are a meaningful revenue contributor.
+The dashboard helps identify:
 
+- High-performing categories
+- Lower-performing categories
+- Sales differences
+- Profit contribution
+- Category performance across different locations
 
-📈Customer Sales & Growth Analysis
+Analyzing both sales and profitability provides a more complete view of category performance.
 
-This page provides an in-depth analysis of customer Net Sales using a Decomposition Tree and Time Intelligence metrics. It enables drill-down by Gender, City, Age, and Customer ID, while MTD, QTD, YTD, MoM, QoQ, and YoY metrics highlight sales performance and growth trends across cities.
+---
 
-<img width="1190" height="668" alt="image" src="https://github.com/user-attachments/assets/25543961-718d-4cf7-a2e6-5086d0be814f" />
+# 👥 3. Customer Analysis
 
+<img width="1186" height="662" alt="image" src="https://github.com/user-attachments/assets/6724d0eb-d25d-48f1-a02e-6a62c776a26b" />  <img width="1186" height="665" alt="image" src="https://github.com/user-attachments/assets/c5197ac2-a89d-4ade-8d63-063d67731ba2" />
 
-💡 Key Insights
 
--Male customers generate the highest sales (3.63M), closely followed by "Other" (3.55M) and Female (3.46M) — confirming the balanced gender contribution seen in the Customer Analysis page.
 
--Lisbon leads MTD net sales (43,356) and shows the highest QTD/YTD figures among cities, reinforcing it as the top-performing market.
+The Customer Analysis section focuses on understanding customer behavior and contribution to the business.
 
--Porto posts the strongest YoY growth (26.79%) among cities, even though it isn't the top city in absolute sales — a market worth watching for future potential.
+The dashboard includes customer KPIs such as:
 
--Records with a blank/missing city consistently underperform (lowest MTD, QTD, YTD, and YoY), tying back to the data quality gaps noted in the cleaning stage.
+- **Total Customers**
+- **Profit per Customer**
+- **Net Sales for New Customers**
 
--Overall city-level YoY growth (25.07% total) is consistent with category-level growth, showing broad-based growth rather than one segment driving results.
+Customer performance can also be analyzed using:
 
+- City
+- Gender
+- Age
+- Customer ID
+- Category
 
-🏪 Store Analysis:
+This allows users to investigate customer behavior from multiple perspectives.
 
-The Store Analysis page evaluates store performance across Net Sales, Profit, Product Categories, and Returned Sales. It compares store and category performance to identify top and underperforming branches, analyze category profitability and sales contribution, and highlight stores with high return values that may require further investigation.
+---
 
-<img width="1190" height="670" alt="image" src="https://github.com/user-attachments/assets/a841340d-0a7e-420d-a8e0-1ed497a44426" />
+## 🌍 Customer Distribution by City
 
+The dashboard analyzes the number of customers across different cities.
 
+The main cities include:
 
-💡 Key Insights
+- Lisbon
+- Faro
+- Braga
+- Coimbra
+- Porto
 
--Sales are well-balanced across all five stores/channels (2.2M–2.3M), with Lisbon Flagship and Faro Outlet slightly ahead — no single store dominates.
+This analysis provides insight into the geographic distribution of the customer base.
 
--Porto Center has the highest returned sales value (254K) despite not being the top-selling store, flagging it as a priority for return-reduction investigation.
+---
 
--Profit margin by category is fairly consistent across stores (~19–20%), though Faro Outlet stands out with a notably higher Shoes profit share (18.97%) and stronger Unknown Category margin (20.30%).
+## 💰 Sales by City
 
--The Online channel performs on par with physical stores in both sales and returns, confirming it's a fully competitive channel rather than a secondary one.
+Sales performance is analyzed across different cities to understand geographic differences in business performance.
 
--Category sales distribution is nearly identical across all stores, suggesting a consistent merchandising/assortment strategy rather than store-specific specialization.
+This allows users to compare sales contribution between locations and identify the strongest-performing markets.
+
+---
+
+## 👤 Sales by Gender
+
+Customer sales are analyzed by gender to understand the distribution of sales across customer segments.
+
+The analysis includes:
+
+- Male
+- Female
+- Other
+- Blank / Missing
+
+This provides visibility into customer composition and missing demographic information.
+
+---
+
+## ⚠️ Missing Customer Information
+
+Some sales transactions are associated with customers whose registration information is missing.
+
+These records appear as **Blank** in customer-related analysis.
+
+Instead of removing these transactions, the dashboard keeps them visible to preserve the completeness of the sales analysis.
+
+This makes it possible to understand the impact of missing customer information on:
+
+- Customer counts
+- Sales
+- Customer segmentation
+- Demographic analysis
+
+---
+
+# 🏪 4. Store Analysis
+
+
+<img width="1184" height="661" alt="image" src="https://github.com/user-attachments/assets/e1cdd2af-de33-47ff-bb84-c67232227171" />
+
+
+The Store Analysis section evaluates the performance of different stores and sales channels.
+
+The analysis includes:
+
+- Sales by Store
+- Profit by Store & Category
+- Sales by Store & Category
+- Returned Sales by Store
+
+The stores and channels analyzed include:
+
+- Lisbon Flagship
+- Faro Outlet
+- Online
+- Coimbra Boutique
+- Porto Center
+
+---
+
+## 💰 Sales by Store
+
+Total sales are compared across the different stores and sales channels.
+
+This helps identify the strongest-performing locations and understand their contribution to overall sales.
+
+---
+
+## 📊 Profit by Store & Category
+
+Profit performance is analyzed by combining:
+
+- Store
+- Category
+
+This provides a detailed view of how different categories contribute to profitability within each store.
+
+It also allows users to compare category profitability across locations.
+
+---
+
+## 🏷️ Sales by Store & Category
+
+Sales are analyzed by combining store and category.
+
+This provides a detailed view of how each category contributes to sales within each store.
+
+The analysis can help identify differences in product demand between locations.
+
+---
+
+## 🔄 Returned Sales by Store
+
+Returned sales are analyzed across stores to provide an additional perspective on store performance.
+
+Comparing returned sales with total sales helps provide more context when evaluating store performance.
+
+---
+
+# 🎛️ Interactive Features
+
+The dashboard includes several interactive features designed to allow users to explore the data dynamically.
+
+## Slicers
+
+Users can filter the report using different slicers, including:
+
+- Date
+- Category
+- City
+- Other available dimensions
+
+The selected filters dynamically update the KPIs and visualizations.
+
+---
+
+## Dynamic Parameters
+
+The report includes five parameters that improve dashboard flexibility.
+
+### Dynamic Axis Parameters
+
+The first two parameters allow users to select the dimensions used on the:
+
+- X-Axis
+- Y-Axis
+
+### Target Parameters
+
+The remaining three parameters allow users to define business targets.
+
+The KPI cards then dynamically evaluate performance against those targets using conditional formatting.
+
+---
+
+# 📊 Dashboard Structure
+
+The report follows an analytical story structure:
+
+### 🏠 Landing Page
+
+Main navigation page for accessing the different sections of the report.
+
+### 📈 Overview
+
+Provides:
+
+- Main KPIs
+- Sales trends
+- Dynamic analysis
+- Target-based KPI evaluation
+
+### 🏷️ Category Analysis
+
+Provides:
+
+- Category performance
+- Sales analysis
+- Profitability analysis
+- Category comparisons
+
+### 👥 Customer Analysis
+
+Provides:
+
+- Customer KPIs
+- Customer distribution
+- Sales by gender
+- Sales by city
+- Customer-level analysis
+- Missing customer information analysis
+
+### 🏪 Store Analysis
+
+Provides:
+
+- Sales by store
+- Sales by category and store
+- Profit by store and category
+- Returned sales analysis
+
+---
+
+# 💡 Key Business Insights
+
+Based on the dashboard analysis:
+
+1. The business generated approximately **11.19M in total sales** based on the report context shown in the dashboard.
+
+2. The customer analysis includes approximately **4K customers**.
+
+3. **Lisbon** has the highest customer count among the displayed cities.
+
+4. Customer sales are distributed across multiple gender segments, with missing gender records also visible in the analysis.
+
+5. Sales performance across the main stores and sales channels is relatively close, making detailed store-level analysis important.
+
+6. Category performance varies across stores, highlighting the importance of analyzing **Store + Category** together.
+
+7. Returned sales differ between stores, providing an additional metric for evaluating store performance.
+
+8. Missing customer registration information is retained in the analysis rather than removing those transactions.
+
+9. Dynamic parameters allow users to explore different business dimensions without creating separate visuals for every scenario.
+
+10. Target-based KPI formatting allows users to quickly identify whether selected KPIs are meeting their defined targets.
+
+---
+
+# 📂 Power BI Analysis
+
+The project demonstrates practical Power BI analysis covering:
+
+- KPI Development
+- Sales Analysis
+- Customer Analysis
+- Category Analysis
+- Store Analysis
+- Profit Analysis
+- Returned Sales Analysis
+- Time-Based Analysis
+- Geographic Analysis
+- Customer Segmentation
+- Missing Data Analysis
+- Dynamic Parameters
+- Target-Based KPI Analysis
+- Conditional Formatting
+- Interactive Slicers
+- Data Modeling
+- Star Schema
+- DAX Measures
+- Power Query Transformations
+
+---
+
+# 🚀 Conclusion
+
+This project demonstrates how **Power BI** can be used to transform raw transactional clothing store data into an interactive Business Intelligence solution.
+
+The project combines **data modeling, Power Query transformations, DAX measures, KPIs, trend analysis, category analysis, customer analysis, store performance, profitability, returned sales, dynamic parameters, and target-based performance monitoring**.
+
+The interactive dashboard allows users to explore business performance from multiple perspectives and evaluate KPIs based on their own selected dimensions and targets.
+
+Overall, the project demonstrates practical skills in:
+
+- **Power BI**
+- **Power Query**
+- **DAX**
+- **Data Modeling**
+- **Star Schema**
+- **Data Visualization**
+- **Interactive Dashboard Design**
+- **Business-Oriented Data Analysis**
